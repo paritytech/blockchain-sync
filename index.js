@@ -65,13 +65,13 @@ function profileClientSync(datadir, spawnClient){
     process.on('uncaughtException', handleExit);
 
 
-    // client.stdout.on("data", (data) => {
-    //   console.log(`OUT: ${data}`);
-    // });
+    client.stdout.on("data", (data) => {
+      console.log(`OUT: ${data}`);
+    });
     
-    // client.stderr.on("data", (data) => {
-    //   console.log(`ERR: ${data}`);
-    // });
+    client.stderr.on("data", (data) => {
+      console.log(`ERR: ${data}`);
+    });
 
 
 
