@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "expand-home-dir": "0.0.2",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.5.1",
+    "web3": "^0.15.1"
+  }
+}
