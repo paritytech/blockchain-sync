@@ -1,8 +1,11 @@
 {
   "dependencies": {
     "expand-home-dir": "0.0.2",
+    "lodash": "^4.3.0",
     "mkdirp": "^0.5.1",
+    "numeral": "^1.5.3",
     "rimraf": "^2.5.1",
+    "usage": "^0.7.1",
     "web3": "^0.15.1"
   }
 }
