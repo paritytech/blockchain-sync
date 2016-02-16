@@ -1,3 +1,19 @@
 #!/usr/bin/env node
 
-require("../lib/bench")(process.argv[2], process.argv[3]);
+var commandLineArgs = require("command-line-args");
+
+var cli = commandLineArgs([
+  {name: "enode", alias: "e"},
+  {name: "client-dir", alias: "d"},
+  {name: "client", defaultOption: true},
+  {name: "rm", defaultValue: false, type: Boolean}
+]);
+
+var options = cli.parse();
+
+require("../lib/bench")({
+  enode: options.enode,
+  client: options.client,
+  clientDir: options["client-dir"],
+  rmData: options.rm
+});

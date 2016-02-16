@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "command-line-args": "^2.1.6",
     "expand-home-dir": "0.0.2",
     "lodash": "^4.3.0",
     "mkdirp": "^0.5.1",
