@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-var commandLineArgs = require("command-line-args");
+var commandLineArgs = require("command-line-args"),
+    expandHomeDir = require("expand-home-dir");
 
 var cli = commandLineArgs([
   {name: "enode", alias: "e"},
@@ -14,6 +15,6 @@ var options = cli.parse();
 require("../lib/bench")({
   enode: options.enode,
   client: options.client,
-  clientDir: options["client-dir"],
+  clientDir: expandHomeDir(options["client-dir"]),
   rmData: options.rm
 });
