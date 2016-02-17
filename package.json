@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "async": "^1.5.2",
     "command-line-args": "^2.1.6",
     "es6-template-strings": "^2.0.0",
     "expand-home-dir": "0.0.2",
