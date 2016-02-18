@@ -12,9 +12,6 @@ var cli = commandLineArgs([
 
 var options = cli.parse();
 
-require("../lib/bench")({
-  enode: options.enode,
-  client: options.client,
-  clientDir: expandHomeDir(options["client-dir"]),
-  rmData: options.rm
-});
+options.clientDir = expandHomeDir(options["client-dir"]);
+
+require("../lib/bench")(options);
