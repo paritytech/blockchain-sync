@@ -11,6 +11,8 @@ npm install
 bin/run-bench [args] <client name>
 ```
 
+The utility will attempt to connect the profiled client to a running "master" node and sync up from it.
+
 ## Options
 
 * **-e, --enode**:         Enode address of a node to sync up with 
@@ -22,4 +24,4 @@ bin/run-bench [args] <client name>
             
 
 
-The utility will attempt to connect the profiled client to a running "master" client and sync up from it.
+
