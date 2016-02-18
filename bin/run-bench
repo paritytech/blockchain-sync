@@ -4,13 +4,22 @@ var commandLineArgs = require("command-line-args"),
     expandHomeDir = require("expand-home-dir");
 
 var cli = commandLineArgs([
-  {name: "enode", alias: "e"},
-  {name: "client-dir", alias: "d"},
-  {name: "client", defaultOption: true},
-  {name: "rm", defaultValue: false, type: Boolean}
+  {name: "enode", alias: "e", description: "Enode address of a node to sync up with"},
+  {name: "client-dir", alias: "d", description: "Client installation directory"},
+  {name: "client", defaultOption: true, description: "Name of the client to run"},
+  {name: "rm", defaultValue: false, type: Boolean,
+   description: "Remove the data directory before sync" },
+  {name: "help", alias: "h", description: "Show instructions"}
 ]);
 
 var options = cli.parse();
+
+if(options.help){
+  console.log(cli.getUsage({
+    synopsis: "bin/run-bench [args] <client name>"
+  }));
+  process.exit();
+}
 
 options.clientDir = expandHomeDir(options["client-dir"]);
 
